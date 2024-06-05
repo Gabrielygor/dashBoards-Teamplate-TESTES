@@ -1,0 +1,26 @@
+@media(max-width:1500px) {
+    body {
+        background-color: cornflowerblue;
+    }
+}
+
+
+@media(max-width:900px) {
+    body {
+        background-color: cornflowerblue;
+    }
+
+    .sidebar{
+        width: 80px;
+    }
+
+    .logo-container{
+        background-color: transparent;
+    }
+
+    .logo-image{
+        display: none;
+    }
+
+}
+
