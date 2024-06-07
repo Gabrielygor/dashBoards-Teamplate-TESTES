@@ -1,0 +1,27 @@
+.load {
+    position: fixed;
+    background-color: var(--clr-background);
+    transition: var(--transition);
+    width: 100vw;
+    height: 100vh;
+    font-size: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.load-spiner {
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.load--hide {
+    visibility: hidden;
+    opacity: 0;
+}
