@@ -1,5 +1,5 @@
 /*------ Settings ------*/
-.container {
+.container-theme-btn {
     --size: 30px;
     display: flex;
     justify-content: center;
@@ -11,28 +11,28 @@
     fill: var(--color-theme-btn);
   }
   
-  .container .moon {
+  .container-theme-btn .moon {
     position: absolute;
     animation: keyframes-fill .5s;
   }
   
-  .container .sun {
+  .container-theme-btn .sun {
     position: absolute;
     display: none;
     animation: keyframes-fill .5s;
   }
   
   /* ------ On check event ------ */
-  .container input:checked ~ .moon {
+  .container-theme-btn input:checked ~ .moon {
     display: none;
   }
   
-  .container input:checked ~ .sun {
+  .container-theme-btn input:checked ~ .sun {
     display: block;
   }
   
   /* ------ Hide the default checkbox ------ */
-  .container input {
+  .container-theme-btn input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
