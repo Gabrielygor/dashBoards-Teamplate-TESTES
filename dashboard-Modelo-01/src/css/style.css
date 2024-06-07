@@ -110,8 +110,12 @@ body {
 }
 
 .state-select-list__item:hover {
-    background-color: var();
-    color: var();
+    background-color: var(--clr-card);
+    color: var(--clr-link);
+}
+
+.state-select-list__item--hide {
+    display: none;
 }
 
 /* STATUS */
