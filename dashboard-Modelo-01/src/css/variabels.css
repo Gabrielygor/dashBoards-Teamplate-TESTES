@@ -6,12 +6,18 @@
     --clr-link: #3333FF;
 
     --color-theme-btn: #000000;
+    --select-hover: #fff;
 
 
-    --clr-confirmed: #D21212;
-    --clr-deaths: #223344;
-    --clr-vaccinated-1: #0000C7;
-    --clr-vaccinated-2: #117711;
+    /* CARDS VARIABLES */
+    --bg-temperatura: rgb(223, 12, 12);
+    --bg-umidade: rgb(0, 81, 255);
+    --bg-pressao: rgb(136, 255, 0);
+    --bg-luminosidade: rgb(229, 255, 0);
+    --clr-temperatura: #000000;
+    --clr-umidade: #000000;
+    --clr-pressao-1: #000000;
+    --clr-luminosidade-2: #000000;
 
     --ff: "Cairo", sans-serif;
     --ts-caption: 600 1.8rem/1 var(--ff);
@@ -30,12 +36,17 @@
     --clr-link: #C2C2FF;
 
     --color-theme-btn: #ffffff;
-
-
-    --clr-confirmed: #FF3333;
-    --clr-deaths: #AABBCC;
-    --clr-vaccinated-1: #6666DD;
-    --clr-vaccinated-2: #44BB44;
+    --select-hover: #fff;
+    
+    /* CARDS VARIABLES */
+    --bg-temperatura: rgb(223, 12, 12);
+    --bg-umidade: rgb(0, 81, 255);
+    --bg-pressao: rgb(136, 255, 0);
+    --bg-luminosidade: rgb(229, 255, 0);
+    --clr-temperatura: #000000;
+    --clr-umidade: #000000;
+    --clr-pressao-1: #000000;
+    --clr-luminosidade-2: #000000;
 
     --ff: "Cairo", sans-serif;
     --ts-caption: 600 1.8rem/1 var(--ff);
