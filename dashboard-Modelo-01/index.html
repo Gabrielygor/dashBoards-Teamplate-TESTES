@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="src/css/themebtn.css">
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -49,11 +51,11 @@
 
     <main class="container">
         <div class="state-select">
-            <div class="state-select-toggle">
-                <span class="state-select-toggle__state-select">Labican</span>
-                <i class="fas fa-chevron-down state-select-toggle__icon"></i>
+            <div class="state-select-toggle" id="state-select-toggle">
+                <span class="state-select-toggle__state-select" id="state-select-toggle__state-select">Labican</span>
+                <i class="fas fa-chevron-down state-select-toggle__icon" id="state-select-toggle__icon"></i>
             </div>
-            <div class="state-select-list">
+            <div class="state-select-list" id="state-select-list">
                 <input type="text" name="" id="" placeholder="Pesquisar" class="state-select-list__search ">
                 <ul>
                     <li class="state-select-list__item " data-id="labican=true">Labican</li>

@@ -103,7 +103,7 @@ a {
     top: calc(100% + 1.5rem);
     visibility: hidden;
     opacity: 0;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Retira a rolagem lateral */
 }
 
 .state-select-list--show {
