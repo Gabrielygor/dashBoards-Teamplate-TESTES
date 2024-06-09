@@ -17,6 +17,23 @@ section {
     border-radius: 1.6rem;
 }
 
+footer{
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    font: var(--ts-normal-semibold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 12rem;
+}
+
+a {
+    color: var(--clr-link);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
 /* Header */
 
 .navbar {
@@ -172,3 +189,7 @@ section {
 }
 
 /*  FOOTER */
+
+.footer-text__soucer {
+    margin-bottom: 3.2rem;
+}
