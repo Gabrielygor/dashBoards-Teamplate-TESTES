@@ -1,5 +1,6 @@
+
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* Esquema para 1rem ser igual a 10px */
     font-family: var(--ff);
     color: var(--clr-font);
     transition: var(--transition);
