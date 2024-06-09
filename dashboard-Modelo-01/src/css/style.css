@@ -103,7 +103,7 @@ a {
     top: calc(100% + 1.5rem);
     visibility: hidden;
     opacity: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 .state-select-list--show {
@@ -116,7 +116,7 @@ a {
     background-color: var(--clr-background);
     transition: var(--transition);
     color: var(--clr-font);
-    width: 96%;
+    width: 100%;
     padding: 1.6rem 0 1.6rem 1.6rem;
     border: none;
     outline: none;
