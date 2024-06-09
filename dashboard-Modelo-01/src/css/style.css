@@ -185,6 +185,7 @@ a {
 
 .data-box__header {
     font: var(--ts-caption);
+    color: var(--clr-font);
     text-transform: uppercase;
     margin-bottom: 1.6rem;
 }
