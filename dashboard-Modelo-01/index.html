@@ -56,12 +56,11 @@
                 <i class="fas fa-chevron-down state-select-toggle__icon" id="state-select-toggle__icon"></i>
             </div>
             <div class="state-select-list" id="state-select-list">
-                <input type="text" name="" id="" placeholder="Pesquisar" class="state-select-list__search ">
+                <input type="text" name="" id="state-select-list__search" placeholder="Pesquisar" class="state-select-list__search">
                 <ul>
-                    <li class="state-select-list__item " data-id="labican=true">Labican</li>
-                    <!-- <li class="state-select-list__item" data-id="uf=12">Biblioteca</li>
-                    <li class="state-select-list__item" data-id="uf=27">Labens</li>
-                    <li class="state-select-list__item" data-id="us=16">LabePI</li> -->
+                    <li class="state-select-list__item" data-id="1293177">Labican</li>
+                    <li class="state-select-list__item" data-id="0000000">Labens</li>
+                    <li class="state-select-list__item" data-id="0000000">LabePI</li>
                 </ul>
             </div>
         </div>
@@ -73,7 +72,7 @@
                 <i class="fa-solid fa-temperature-low"></i>
             </div>
             <div class="info">
-                <span class="info__total info__total--temperatura">1000000</span>
+                <span class="info__total info__total--temperatura" id="temperatura-valor"></span>
                 <h2 class="info__label">Temperatura</h2>
             </div>
         </section>
@@ -83,7 +82,7 @@
                 <i class="fa-solid fa-droplet"></i>
             </div>
             <div class="info">
-                <span class="info__total info__total--umidade">1000000</span>
+                <span class="info__total info__total--umidade"></span>
                 <h2 class="info__label">Umidade</h2>
             </div>
         </section>
@@ -93,7 +92,7 @@
                 <i class="fa-regular fa-compass"></i>
             </div>
             <div class="info">
-                <span class="info__total info__total--pressao">1000000</span>
+                <span class="info__total info__total--pressao"></span>
                 <h2 class="info__label">Pressão</h2>
             </div>
         </section>
@@ -103,7 +102,7 @@
                 <i class="fa-solid fa-lightbulb"></i>
             </div>
             <div class="info">
-                <span class="info__total info__total--luminosidade">1000000</span>
+                <span class="info__total info__total--luminosidade"></span>
                 <h2 class="info__label">Luminosidade</h2>
             </div>
         </section>
@@ -170,8 +169,8 @@
         </div>
     </footer> -->
 
-    <script src="src/js/apiThingSpeak.js"></script>
     <script src="src/js/script.js"></script>
+    <script src="src/js/apiThingSpeak.js"></script>
 </body>
 
 </html>
