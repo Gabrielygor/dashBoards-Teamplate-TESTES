@@ -162,3 +162,13 @@ section {
     background-color: var(--bg-luminosidade);
     color: var(--clr-temperatura);
 }
+
+/* DATAS */
+
+.data-box__header {
+    font: var(--ts-caption);
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+/*  FOOTER */
