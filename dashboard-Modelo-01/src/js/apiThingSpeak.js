@@ -18,7 +18,7 @@ inputOptions.forEach(item => {
 
         if (optionId == '1293177') {
             updateData()
-        }else if (optionId == '72539'){
+        } else if (optionId == '72539') {
             updateData2()
         } else {
             updateData3()
@@ -32,24 +32,6 @@ inputOptions.forEach(item => {
 function updateData() {
     const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
     fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        if (data && data.field1) {
-            temperatura.textContent = data.field1;
-            umidade.textContent = data.field2;
-        } else {
-            console.error('Não foi possível obter a temperatura.');
-        }
-    })
-        .catch(error => {
-            console.error('Erro ao recuperar dados', error);
-        });
-        console.log(url);
-    }
-    
-    function updateData2 () {
-        const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
-        fetch(url)
         .then(response => response.json())
         .then(data => {
             if (data && data.field1) {
@@ -62,12 +44,12 @@ function updateData() {
         .catch(error => {
             console.error('Erro ao recuperar dados', error);
         });
-        console.log(url);
-    }
-    
-    function updateData3 () {
-        const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
-        fetch(url)
+    console.log(url);
+}
+
+function updateData2() {
+    const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
+    fetch(url)
         .then(response => response.json())
         .then(data => {
             if (data && data.field1) {
@@ -80,14 +62,30 @@ function updateData() {
         .catch(error => {
             console.error('Erro ao recuperar dados', error);
         });
-        console.log(url);
+    console.log(url);
+}
+
+function updateData3() {
+    const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.field1) {
+                temperatura.textContent = data.field1;
+                umidade.textContent = data.field2;
+            } else {
+                console.error('Não foi possível obter a temperatura.');
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao recuperar dados', error);
+        });
+    console.log(url);
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     updateData();
     setInterval(updateData, 120000);  //Tempo é lido em milesegundos
 });
-
-
 // const url = `https://api.thingspeak.com/channels/${optionId}/fields/${numeroDeLeituras}/last.json`
