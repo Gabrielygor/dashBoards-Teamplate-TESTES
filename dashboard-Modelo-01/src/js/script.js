@@ -1,37 +1,36 @@
+import { updateData, updateData2, updateData3} from './apiThingSpeak.js';
+import { temperaturaGafico, } from './graphics.js'
 
-const themeBtn = document.getElementById('theme-btn');
-const body = document.getElementById('body');
-
+const inputOptions = document.querySelectorAll('#state-select-list li');
+const inputText = document.getElementById('state-select-toggle__state-select');
 const searchDiv = document.getElementById('state-select-toggle');
-const stateIcon = document.getElementById('state-select-toggle__icon');
-const searchList = document.getElementById('state-select-list');
 
+export var optionId = '1293177'
 
-const inputSearch = document.getElementById('state-select-list__search');
+inputOptions.forEach(item => {
+    item.addEventListener('click', () => {
+        inputText.innerText = item.innerText
+        optionId = item.getAttribute('data-id');
+        searchDiv.dispatchEvent(new Event('click'));
 
+        if (optionId == '1293177') {
+            updateData()
+            temperaturaGafico()
+        } else if (optionId == '72539') {
+            updateData2()
+            temperaturaGafico()
+        } else {
+            updateData3()
+            temperaturaGafico()
+        }
 
-themeBtn.addEventListener('click', ()=> {
-    document.body.classList.toggle('dark-mode');
+        console.log(item.innerText);
+        console.log(optionId);
+    });
 });
 
-searchDiv.addEventListener('click',() => {
-    searchList.classList.toggle('state-select-list--show');
-    stateIcon.classList.toggle('state-select-toggle__icon--rotate');
-} )
-
-
-inputSearch.addEventListener('keyup', (e) => {
-    const search = e.target.value.toLowerCase();
-
-    for(const item of inputOptions) {
-        const state = item.innerText.toLowerCase()
-        
-        if(state.includes(search)) {
-            item.classList.remove('state-select-list__item--hide')
-        } else {
-            item.classList.add('state-select-list__item--hide')
-        }
-    }
-
-})
+document.addEventListener('DOMContentLoaded', function () {
+    updateData();
+    setInterval(updateData, 120000);  //Tempo é lido em milesegundos
+});
 

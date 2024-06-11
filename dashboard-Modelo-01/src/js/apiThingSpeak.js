@@ -1,34 +1,12 @@
-const inputOptions = document.querySelectorAll('#state-select-list li');
-const inputText = document.getElementById('state-select-toggle__state-select');
+import { optionId } from './script.js'
 
 const temperatura = document.getElementById('temperatura-valor')
 const umidade = document.getElementById('umidade-valor')
 const pressao = document.getElementById('pressao-valor')
 const luminosidade = document.getElementById('luminosidade-valor')
 
-let optionId = '1293177' //Chave da api do labican (padrao para o site, vai mudar de acordo com a opção escolhidad)
 
-
-inputOptions.forEach(item => {
-    item.addEventListener('click', () => {
-        inputText.innerText = item.innerText
-        optionId = item.getAttribute('data-id');
-        searchDiv.dispatchEvent(new Event('click'));
-
-        if (optionId == '1293177') {
-            updateData()
-        } else if (optionId == '72539') {
-            updateData2()
-        } else {
-            updateData3()
-        }
-
-        console.log(item.innerText);
-        console.log(optionId);
-    });
-});
-
-function updateData() {
+export function updateData() {
     const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
     fetch(url)
         .then(response => response.json())
@@ -48,7 +26,7 @@ function updateData() {
     console.log(url);
 }
 
-function updateData2() {
+export function updateData2() {
     const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
     fetch(url)
         .then(response => response.json())
@@ -66,7 +44,7 @@ function updateData2() {
     console.log(url);
 }
 
-function updateData3() {
+export function updateData3() {
     const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
     fetch(url)
         .then(response => response.json())
@@ -84,9 +62,3 @@ function updateData3() {
     console.log(url);
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    updateData();
-    setInterval(updateData, 120000);  //Tempo é lido em milesegundos
-});
-// const url = `https://api.thingspeak.com/channels/${optionId}/fields/${numeroDeLeituras}/last.json`
