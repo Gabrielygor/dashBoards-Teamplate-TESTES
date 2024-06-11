@@ -1,7 +1,7 @@
 :root {
-    --clr-background: #F5F5F5;
+    --clr-background: #d2d2d2;
     --clr-font: #111111;
-    --clr-card: #FEE7E7;
+    --clr-card: #fffdfd;
     --clr-switch-track: #AABBCC;
     --clr-link: #3333FF;
 
@@ -29,8 +29,8 @@
 
 
     /* scrollbar */
-    --bg-scrollbar: #fff;
-    --clr-scrollbar:#000;
+    --bg-scrollbar: #8c8484;
+    --clr-scrollbar:#222020;
 }
 
 .dark-mode {
