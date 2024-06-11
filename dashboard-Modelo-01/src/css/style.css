@@ -14,6 +14,7 @@ body {
 section {
     transition: var(--transition);
     box-shadow: var(--shadow-card);
+    background-color: var(--clr-card);
     padding: 1.6rem;
     border-radius: 1.6rem;
 }
@@ -80,6 +81,7 @@ a {
 }
 
 .state-select-toggle {
+    color: var(--clr-font);
     padding: 1.6rem;
     display: flex;
     justify-content: space-between;
@@ -187,7 +189,7 @@ a {
     font: var(--ts-caption);
     color: var(--clr-font);
     text-transform: uppercase;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.5rem;
 }
 
 /*  FOOTER */

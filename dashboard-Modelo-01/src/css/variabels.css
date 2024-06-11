@@ -34,14 +34,14 @@
 }
 
 .dark-mode {
-    --clr-background: #111111;
-    --clr-font: #F5F5F5;
-    --clr-card: #1A1A1A;
+    --clr-background: #151313;
+    --clr-font: #ffffff;
+    --clr-card: #232121;
     --clr-switch-track: #AABBCC;
     --clr-link: #C2C2FF;
 
     --color-theme-btn: #ffffff;
-    --select-hover: #fff;
+    --select-hover: #433e3e;
     
     /* CARDS VARIABLES */
     --bg-temperatura: rgb(223, 12, 12);
