@@ -56,7 +56,8 @@
                 <i class="fas fa-chevron-down state-select-toggle__icon" id="state-select-toggle__icon"></i>
             </div>
             <div class="state-select-list" id="state-select-list">
-                <input type="text" name="" id="state-select-list__search" placeholder="Pesquisar" class="state-select-list__search">
+                <input type="text" name="" id="state-select-list__search" placeholder="Pesquisar"
+                    class="state-select-list__search">
                 <ul>
                     <li class="state-select-list__item" data-id="1293177">Labican</li>
                     <li class="state-select-list__item" data-id="72539">Labens</li>
@@ -115,7 +116,9 @@
             <h2 class="data-box__header">
                 Temperatura
             </h2>
-            <div class="data-box__body" id="temperatura-grafico"></div>
+            <div class="data-box__body" id="temperatura-grafico">
+                <canvas id="temperaturaGrafico" width="100%" height="50"></canvas>
+            </div>
         </section>
 
         <section class="data-box umidade-grafico">
@@ -157,7 +160,10 @@
             <h2 class="data-box__header">
                 Localização
             </h2>
-            <div class="data-box__body"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1327.302047796407!2d-37.08426083710308!3d-6.467210551320304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7afed7934494ec7%3A0xbc86346e5a924e94!2sLABICAN%20-%20Laborat%C3%B3rio%20de%20Intelig%C3%AAncia%20Computacional%20Aplicada%20a%20Neg%C3%B3cios!5e0!3m2!1spt-BR!2sbr!4v1718009599751!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div class="data-box__body"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1327.302047796407!2d-37.08426083710308!3d-6.467210551320304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7afed7934494ec7%3A0xbc86346e5a924e94!2sLABICAN%20-%20Laborat%C3%B3rio%20de%20Intelig%C3%AAncia%20Computacional%20Aplicada%20a%20Neg%C3%B3cios!5e0!3m2!1spt-BR!2sbr!4v1718009599751!5m2!1spt-BR!2sbr"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </section>
 
         <!-- DATAS END -->
@@ -170,6 +176,7 @@
         </div>
     </footer> -->
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="src/js/teste.js"></script>
     <script type="module" src="src/js/script.js"></script>
 

@@ -14,14 +14,14 @@ inputOptions.forEach(item => {
         searchDiv.dispatchEvent(new Event('click'));
 
         if (optionId == '1293177') {
-            updateData()
-            temperaturaGafico()
+            updateData();
+            temperaturaGafico();
         } else if (optionId == '72539') {
-            updateData2()
-            temperaturaGafico()
+            updateData2();
+            temperaturaGafico();
         } else {
-            updateData3()
-            temperaturaGafico()
+            updateData3();
+            temperaturaGafico();
         }
 
         console.log(item.innerText);
@@ -31,6 +31,7 @@ inputOptions.forEach(item => {
 
 document.addEventListener('DOMContentLoaded', function () {
     updateData();
+    temperaturaGafico();
     setInterval(updateData, 120000);  //Tempo é lido em milesegundos
 });
 
