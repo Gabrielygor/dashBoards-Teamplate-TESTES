@@ -6,7 +6,6 @@ const umidade = document.getElementById('umidade-valor')
 const pressao = document.getElementById('pressao-valor')
 const luminosidade = document.getElementById('luminosidade-valor')
 
-
 let optionId = '1293177' //Chave da api do labican (padrao para o site, vai mudar de acordo com a opção escolhidad)
 
 
@@ -37,6 +36,8 @@ function updateData() {
             if (data && data.field1) {
                 temperatura.textContent = data.field1;
                 umidade.textContent = data.field2;
+                pressao.textContent = data.field3;
+                luminosidade.textContent = data.field4;
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
