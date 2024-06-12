@@ -1,5 +1,5 @@
 import { updateData, updateData2, updateData3 } from './apiThingSpeak.js';
-import { temperaturaGrafico, umidadeGrafico, pressaoGrafico, luminosidadeGrafico } from './graphics.js'
+import { temperaturaGrafico, umidadeGrafico, pressaoGrafico, luminosidadeGrafico, cleanGrafico } from './graphics.js'
 
 const inputOptions = document.querySelectorAll('#state-select-list li');
 const inputText = document.getElementById('state-select-toggle__state-select');
@@ -16,15 +16,12 @@ inputOptions.forEach(item => {
         if (optionId == '1293177') {
             updateData();
             temperaturaGrafico();
-            umidadeGrafico();
-            pressaoGrafico();
-            luminosidadeGrafico();
         } else if (optionId == '72539') {
             updateData2();
-            temperaturaGafico();
+            temperaturaGrafico();
         } else {
             updateData3();
-            temperaturaGafico();
+            temperaturaGrafico();
         }
 
         console.log(item.innerText);
@@ -35,9 +32,7 @@ inputOptions.forEach(item => {
 document.addEventListener('DOMContentLoaded', function () {
     updateData();
     temperaturaGrafico();
-    umidadeGrafico();
-    pressaoGrafico()
-    luminosidadeGrafico();
+
     setInterval(updateData, 120000);  //Tempo é lido em milesegundos
 });
 

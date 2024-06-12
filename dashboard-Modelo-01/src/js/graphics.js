@@ -1,22 +1,40 @@
-// import { optionId } from './script.js'
+import { optionId } from './script.js'
 
 export async function temperaturaGrafico() {
-    var options = {
-        chart: {
-            type: 'line'
-        },
-        series: [{
-            name: 'sales',
-            data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
-        }],
-        xaxis: {
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
-        }
-    }
+    fetch(`https://api.thingspeak.com/channels/${optionId}/fields/1.json?results=600`)
+        .then(response => response.json())
+        .then(data => {
+            const temperatures = data.feeds.map(feed => parseFloat(feed.field1));
+            const timestamps = data.feeds.map(feed => feed.created_at);
 
-    var chart = new ApexCharts(document.querySelector("#temperaturaGrafico"), options);
+            var options = {
+                chart: {
+                    type: 'line',
+                    height: 350
+                },
+                series: [{
+                    name: 'Temperatura',
+                    data: temperatures
+                }],
+                xaxis: {
+                    categories: timestamps,
+                    type: 'datetime',
+                    labels: {
+                        formatter: function (value) {
+                            // Formata o rótulo para mostrar apenas as horas
+                            const date = new Date(value);
+                            const hours = date.getHours();
+                            const minutes = date.getMinutes();
+                            return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+                        }
+                    }
+                },
+            };
 
-    chart.render();
+            var chart = new ApexCharts(document.querySelector("#temperaturaGrafico"), options);
+            chart.render();
+        })
+        .catch(error => console.error('Erro ao obter dados do ThingSpeak:', error));
 }
 
 export async function umidadeGrafico() {
@@ -30,3 +48,6 @@ export async function luminosidadeGrafico() {
 }
 
 
+export function cleanGrafico() {
+    
+}
