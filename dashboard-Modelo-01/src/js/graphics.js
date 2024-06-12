@@ -1,27 +1,32 @@
-const tempGafico = document.getElementById('temperatura-grafico')
+// import { optionId } from './script.js'
 
-export async function temperaturaGafico() {
-    const ctx = document.getElementById('temperaturaGrafico');
-
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-            datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
-                borderWidth: 1
-            }]
+export async function temperaturaGrafico() {
+    var options = {
+        chart: {
+            type: 'line'
         },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
+        series: [{
+            name: 'sales',
+            data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+        }],
+        xaxis: {
+            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
         }
-    });
+    }
+
+    var chart = new ApexCharts(document.querySelector("#temperaturaGrafico"), options);
+
+    chart.render();
 }
 
+export async function umidadeGrafico() {
+
+}
+
+export async function pressaoGrafico() {
+}
+
+export async function luminosidadeGrafico() {
+}
 
 
