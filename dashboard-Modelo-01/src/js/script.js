@@ -14,14 +14,23 @@ inputOptions.forEach(item => {
         searchDiv.dispatchEvent(new Event('click'));
 
         if (optionId == '1293177') {
+            cleanGrafico();
             updateData();
             temperaturaGrafico();
+            umidadeGrafico();
+
         } else if (optionId == '72539') {
+            cleanGrafico();
             updateData2();
             temperaturaGrafico();
+            umidadeGrafico();
+
         } else {
+            cleanGrafico();
             updateData3();
             temperaturaGrafico();
+            umidadeGrafico();
+
         }
 
         console.log(item.innerText);
@@ -32,7 +41,12 @@ inputOptions.forEach(item => {
 document.addEventListener('DOMContentLoaded', function () {
     updateData();
     temperaturaGrafico();
+    umidadeGrafico();
+
 
     setInterval(updateData, 120000);  //Tempo é lido em milesegundos
+    setInterval(temperaturaGrafico, 120000);  //Tempo é lido em milesegundos
+    setInterval(umidadeGrafico, 120000);  //Tempo é lido em milesegundos
+
 });
 
