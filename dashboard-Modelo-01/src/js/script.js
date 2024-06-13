@@ -19,16 +19,25 @@ inputOptions.forEach(item => {
             updateData();
             temperaturaGrafico();
             umidadeGrafico();
+            luminosidadeGrafico();
+            pressaoGrafico();
+
         } else if (optionId == '72539') {
             cleanGrafico();
             updateData2();
             temperaturaGrafico();
             umidadeGrafico();
+            luminosidadeGrafico();
+            pressaoGrafico();
+
         } else {
             cleanGrafico();
             updateData3();
             temperaturaGrafico();
             umidadeGrafico();
+            luminosidadeGrafico();
+            pressaoGrafico();
+
         }
     });
 });
@@ -38,9 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
     updateData();
     temperaturaGrafico();
     umidadeGrafico();
+    luminosidadeGrafico();
+    pressaoGrafico();
 
-    setInterval(updateData, 30000);  //Tempo é lido em milesegundos
-    setInterval(temperaturaGrafico, 30000);
-    setInterval(umidadeGrafico, 30000);
+    setInterval(updateData, 180000);  //Tempo é lido em milesegundos
+    setInterval(temperaturaGrafico, 180000);
+    setInterval(umidadeGrafico, 180000);
 });
 
