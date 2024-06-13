@@ -14,34 +14,33 @@ inputOptions.forEach(item => {
         optionId = item.getAttribute('data-id');
         searchDiv.dispatchEvent(new Event('click'));
 
-        cleanGrafico();
-
         if (optionId == '1293177') {
+            cleanGrafico();
             updateData();
             temperaturaGrafico();
             umidadeGrafico();
-
         } else if (optionId == '72539') {
+            cleanGrafico();
             updateData2();
             temperaturaGrafico();
             umidadeGrafico();
-
         } else {
+            cleanGrafico();
             updateData3();
             temperaturaGrafico();
             umidadeGrafico();
-
         }
     });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+    cleanGrafico();
     updateData();
     temperaturaGrafico();
     umidadeGrafico();
 
-    setInterval(updateData, 180000);  //Tempo é lido em milesegundos
-    setInterval(temperaturaGrafico, 180000);
-    setInterval(umidadeGrafico, 180000);
+    setInterval(updateData, 30000);  //Tempo é lido em milesegundos
+    setInterval(temperaturaGrafico, 30000);
+    setInterval(umidadeGrafico, 30000);
 });
 
