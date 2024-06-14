@@ -5,9 +5,14 @@
     .container {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .status {
+        min-height: 12rem;
+    }
 }
 
 @media(min-width:960px) {
+
 
     .state-select {
         grid-column: 1/ -1;
