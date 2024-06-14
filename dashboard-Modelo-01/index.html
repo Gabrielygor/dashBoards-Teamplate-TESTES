@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="src/css/responsive.css">
     <link rel="stylesheet" href="src/css/scrollbar.css">
 
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
-    
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <link rel="shortcut icon" href="src/assets/favicon.ico" type="image/x-icon">
     <title>DashBoard LABICAN</title>
 </head>
 
-<body id="body">
+<body id="body" class="">
 
     <div class="load load--hide">
         <i class="fa-solid fa-spinner load-spiner"></i>
@@ -68,109 +68,110 @@
         </div>
 
         <!-- CARDS -->
+        <div class="cards">
+            <section class="status temperatura">
+                <div class="status__icon status__icon--temperatura">
+                    <i class="fa-solid fa-temperature-low"></i>
+                </div>
+                <div class="info">
+                    <span class="info__total info__total--temperatura" id="temperatura-valor">1000000</span> <span>°C
+                    </span>
+                    <h2 class="info__label">Temperatura</h2>
+                </div>
+            </section>
 
-        <section class="status temperatura">
-            <div class="status__icon status__icon--temperatura">
-                <i class="fa-solid fa-temperature-low"></i>
-            </div>
-            <div class="info">
-                <span class="info__total info__total--temperatura" id="temperatura-valor">1000000</span> <span>°C
-                </span>
-                <h2 class="info__label">Temperatura</h2>
-            </div>
-        </section>
+            <section class="status umidade">
+                <div class="status__icon status__icon--umidade">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <div class="info">
+                    <span class="info__total info__total--umidade" id="umidade-valor">1000000</span><span>%</span>
+                    <h2 class="info__label">Umidade</h2>
+                </div>
+            </section>
 
-        <section class="status umidade">
-            <div class="status__icon status__icon--umidade">
-                <i class="fa-solid fa-droplet"></i>
-            </div>
-            <div class="info">
-                <span class="info__total info__total--umidade" id="umidade-valor">1000000</span><span>%</span>
-                <h2 class="info__label">Umidade</h2>
-            </div>
-        </section>
+            <section class="status pressao">
+                <div class="status__icon status__icon--pressao">
+                    <i class="fa-regular fa-compass"></i>
+                </div>
+                <div class="info">
+                    <span class="info__total info__total--pressao" id="pressao-valor">1000000</span>
+                    <h2 class="info__label">Pressão</h2>
+                </div>
+            </section>
 
-        <section class="status pressao">
-            <div class="status__icon status__icon--pressao">
-                <i class="fa-regular fa-compass"></i>
-            </div>
-            <div class="info">
-                <span class="info__total info__total--pressao" id="pressao-valor">1000000</span>
-                <h2 class="info__label">Pressão</h2>
-            </div>
-        </section>
-
-        <section class="status luminosidade">
-            <div class="status__icon status__icon--luminosidade">
-                <i class="fa-solid fa-lightbulb"></i>
-            </div>
-            <div class="info">
-                <span class="info__total info__total--luminosidade" id="luminosidade-valor">1000000</span>
-                <h2 class="info__label">Luminosidade</h2>
-            </div>
-        </section>
-
+            <section class="status luminosidade">
+                <div class="status__icon status__icon--luminosidade">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div class="info">
+                    <span class="info__total info__total--luminosidade" id="luminosidade-valor">1000000</span>
+                    <h2 class="info__label">Luminosidade</h2>
+                </div>
+            </section>
+        </div>
         <!-- CARDS END -->
 
         <!-- DATAS -->
-        <section class="data-box temperatura-grafico">
-            <h2 class="data-box__header">
-                Temperatura
-            </h2>
-            <div class="data-box__body limpa-grafico" id="temperaturaGrafico">
-            </div>
-        </section>
+        <div class="graficos">
+            <section class="data-box temperatura-grafico">
+                <h2 class="data-box__header">
+                    Temperatura
+                </h2>
+                <div class="data-box__body limpa-grafico" id="temperaturaGrafico">
+                </div>
+            </section>
 
-        <section class="data-box umidade-grafico">
-            <h2 class="data-box__header">
-                Luminosidade
-            </h2>
-            <div class="data-box__body" id="luminosidadeGrafico">
-            </div>
-        </section>
+            <section class="data-box umidade-grafico">
+                <h2 class="data-box__header">
+                    Luminosidade
+                </h2>
+                <div class="data-box__body" id="luminosidadeGrafico">
+                </div>
+            </section>
 
-        <section class="data-box pressao-grafico">
-            <h2 class="data-box__header">
-                pressao
-            </h2>
-            <div class="data-box__body" id="pressaoGrafico">
-            </div>
-        </section>
+            <section class="data-box pressao-grafico">
+                <h2 class="data-box__header">
+                    pressao
+                </h2>
+                <div class="data-box__body" id="pressaoGrafico">
+                </div>
+            </section>
 
-        <section class="data-box luminosidade-grafico">
-            <h2 class="data-box__header">
-                Umidade
-            </h2>
-            <div class="data-box__body" id="umidadeGrafico">
-            </div>
-        </section>
+            <section class="data-box luminosidade-grafico">
+                <h2 class="data-box__header">
+                    Umidade
+                </h2>
+                <div class="data-box__body" id="umidadeGrafico">
+                </div>
+            </section>
 
-        <section class="data-box padrao">
-            <h2 class="data-box__header">
-                ?????
-            </h2>
-            <div class="data-box__body">
-            </div>
-        </section>
+            <section class="data-box padrao">
+                <h2 class="data-box__header">
+                    ?????
+                </h2>
+                <div class="data-box__body">
+                </div>
+            </section>
 
-        <section class="data-box padrao">
-            <h2 class="data-box__header">
-                ?????
-            </h2>
-            <div class="data-box__body">
-            </div>
-        </section>
+            <section class="data-box padrao">
+                <h2 class="data-box__header">
+                    ?????
+                </h2>
+                <div class="data-box__body">
+                </div>
+            </section>
 
-        <section class="data-box padrao">
-            <h2 class="data-box__header">
-                Localização
-            </h2>
-            <div class="data-box__body"><iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1327.302047796407!2d-37.08426083710308!3d-6.467210551320304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7afed7934494ec7%3A0xbc86346e5a924e94!2sLABICAN%20-%20Laborat%C3%B3rio%20de%20Intelig%C3%AAncia%20Computacional%20Aplicada%20a%20Neg%C3%B3cios!5e0!3m2!1spt-BR!2sbr!4v1718009599751!5m2!1spt-BR!2sbr"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-        </section>
-
+            <section class="data-box padrao">
+                <h2 class="data-box__header">
+                    Localização
+                </h2>
+                <div class="data-box__body"><iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1327.302047796407!2d-37.08426083710308!3d-6.467210551320304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7afed7934494ec7%3A0xbc86346e5a924e94!2sLABICAN%20-%20Laborat%C3%B3rio%20de%20Intelig%C3%AAncia%20Computacional%20Aplicada%20a%20Neg%C3%B3cios!5e0!3m2!1spt-BR!2sbr!4v1718009599751!5m2!1spt-BR!2sbr"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            </section>
+        </div>
         <!-- DATAS END -->
     </main>
 
