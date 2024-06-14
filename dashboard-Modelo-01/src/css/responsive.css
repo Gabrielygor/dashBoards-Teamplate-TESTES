@@ -1,13 +1,28 @@
-
-
 @media(min-width:900px) {
 
-    .container {
+    .graficos {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .temperatura-grafico {
+        grid-column: span 2;
+        grid-row: span 1;
     }
 
     .status {
         min-height: 12rem;
+        max-width: 100%;
+    }
+
+    .info__label {
+        display: block;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
     }
 }
 
@@ -26,7 +41,12 @@
 
 @media(min-width:1170px) {
 
-    .container {
+    .cards {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .graficos {
         grid-template-columns: repeat(4, 1fr);
     }
 
@@ -35,15 +55,17 @@
         grid-row: span 2;
     }
 
-    .luminosidade-grafico, .padrao {
+    .luminosidade-grafico,
+    .padrao {
         grid-column: span 2;
     }
 
     .state-select {
-        grid-column: 1;
+        max-width: 24.5%;
     }
 
     .status:nth-of-type(1) {
         grid-column: 1;
     }
+
 }

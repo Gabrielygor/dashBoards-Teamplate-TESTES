@@ -147,6 +147,12 @@ a {
 
 /* CARDS */
 
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
 .status {
     min-height: 6rem;
     display: flex;
@@ -161,6 +167,10 @@ a {
 .info {
     font: var(--ts-caption);
     text-transform: uppercase;
+}
+
+.info__label {
+    display: none;
 }
 
 .temperatura {
@@ -184,6 +194,12 @@ a {
 }
 
 /* DATAS */
+
+.graficos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .data-box__header {
     font: var(--ts-caption);
