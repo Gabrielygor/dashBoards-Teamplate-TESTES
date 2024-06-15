@@ -1,6 +1,6 @@
 import { optionId } from './script.js'
 
-const quantidadeDeLeituras = 214  // 214 leituras é mais ou menos 1 hora 
+const quantidadeDeLeituras = 50 // 214 leituras é mais ou menos 1 hora 
 
 export async function temperaturaGrafico() {
     fetch(`https://api.thingspeak.com/channels/${optionId}/fields/1.json?results=${quantidadeDeLeituras}`)
@@ -152,7 +152,7 @@ export async function luminosidadeGrafico() {
 
 
 export function cleanGrafico() {
-    const graficosDivs = document.querySelectorAll('#temperaturaGrafico, #umidadeGrafico');
+    const graficosDivs = document.querySelectorAll('#temperaturaGrafico, #umidadeGrafico, #pressaoGrafico, #luminosidadeGrafico ');
     graficosDivs.forEach(div => {
         div.innerHTML = '';
     });

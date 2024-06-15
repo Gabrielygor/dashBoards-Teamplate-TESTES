@@ -14,8 +14,10 @@ inputOptions.forEach(item => {
         optionId = item.getAttribute('data-id');
         searchDiv.dispatchEvent(new Event('click'));
 
+
         if (optionId == '1293177') {
             cleanGrafico();
+
             updateData();
             temperaturaGrafico();
             umidadeGrafico();
@@ -24,6 +26,7 @@ inputOptions.forEach(item => {
 
         } else if (optionId == '72539') {
             cleanGrafico();
+
             updateData2();
             temperaturaGrafico();
             umidadeGrafico();
@@ -32,6 +35,7 @@ inputOptions.forEach(item => {
 
         } else {
             cleanGrafico();
+
             updateData3();
             temperaturaGrafico();
             umidadeGrafico();
@@ -53,5 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(updateData, 180000);  //Tempo é lido em milesegundos
     setInterval(temperaturaGrafico, 180000);
     setInterval(umidadeGrafico, 180000);
+    setInterval(luminosidadeGrafico, 180000);
+    setInterval(pressaoGrafico, 180000);
+
 });
 
