@@ -37,6 +37,8 @@ export async function temperaturaGrafico() {
             chart.render();
         })
         .catch(error => console.error('Erro ao obter dados do ThingSpeak:', error));
+
+        console.log("Atualizou");
 }
 
 export async function umidadeGrafico() {
