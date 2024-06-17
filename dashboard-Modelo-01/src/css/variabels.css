@@ -33,6 +33,16 @@
     --clr-scrollbar: #222020;
 
     --bg-eixos-graficos: #000;
+
+    /* footer */
+
+    --footer-button-icon: #000000;
+    --footer--button-bg: #ffffff;
+    --footer-button-border: #000000;
+
+    --footer-button-hover-icon: #ffffff;
+    --footer-button-hover-bg: #000000;
+    --footer-button-hover-border: #000;
 }
 
 .dark-mode {
@@ -67,7 +77,18 @@
     --bg-scrollbar: #000000;
     --clr-scrollbar: #ffffff;
 
-
+    /* Graficos */
     --bg-eixos-graficos: #ffffff;
+
+
+    /* footer */
+
+    --footer-button-icon: #fff;
+    --footer--button-bg: #000;
+    --footer-button-border: #fff;
+
+    --footer-button-hover-icon: #000;
+    --footer-button-hover-bg: #fff;
+    --footer-button-hover-border: #000;
 
 }

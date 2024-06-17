@@ -26,6 +26,10 @@
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
     }
+
+    .footer__button {
+        margin-right: 5rem;
+    }
 }
 
 @media(min-width:960px) {
