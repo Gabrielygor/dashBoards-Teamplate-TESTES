@@ -54,8 +54,8 @@ export function updateData3() {
             if (data && data.field1) {
                 temperatura.textContent = parseFloat(data.field1).toFixed(1);
                 umidade.textContent = parseFloat(data.field2).toFixed(1);
-                pressao.textContent = ''
-                luminosidade.textContent = ''
+                pressao.textContent = parseFloat(data.field3).toFixed(1);
+                luminosidade.textContent = parseFloat(data.field4).toFixed(1);
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
