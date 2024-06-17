@@ -32,6 +32,11 @@ footer{
     min-height: 12rem;
 }
 
+a {
+    text-decoration: none;
+
+}
+
 
 /* Header */
 
