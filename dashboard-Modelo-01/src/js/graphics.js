@@ -18,6 +18,8 @@ export async function temperaturaGrafico() {
                     name: 'Temperatura',
                     data: temperatures
                 }],
+                colors: ['#DC143C'], 
+
                 xaxis: {
                     categories: timestamps,
                     type: 'datetime',
@@ -57,6 +59,7 @@ export async function umidadeGrafico() {
                     name: 'Umidade %',
                     data: umidade
                 }],
+                colors: ['#4169E1'], 
                 xaxis: {
                     categories: timestamps,
                     type: 'datetime',
@@ -94,6 +97,8 @@ export async function pressaoGrafico() {
                     name: 'Pressão',
                     data: umidade
                 }],
+                colors: ['#00FF00'], 
+
                 xaxis: {
                     categories: timestamps,
                     type: 'datetime',
@@ -131,6 +136,8 @@ export async function luminosidadeGrafico() {
                     name: 'Luminosidade',
                     data: umidade
                 }],
+                colors: ['#FFD700'], 
+
                 xaxis: {
                     categories: timestamps,
                     type: 'datetime',

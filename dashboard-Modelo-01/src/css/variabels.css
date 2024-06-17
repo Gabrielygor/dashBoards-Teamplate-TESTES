@@ -10,10 +10,10 @@
 
 
     /* CARDS VARIABLES */
-    --bg-temperatura: rgb(223, 12, 12);
-    --bg-umidade: rgb(0, 81, 255);
-    --bg-pressao: rgb(136, 255, 0);
-    --bg-luminosidade: rgb(229, 255, 0);
+    --bg-temperatura: #DC143C;
+    --bg-umidade: #4169E1;
+    --bg-pressao: #00FF00;
+    --bg-luminosidade: #FFD700;
     --clr-temperatura: #000000;
     --clr-umidade: #000000;
     --clr-pressao-1: #000000;
