@@ -12,10 +12,10 @@ export function updateData() {
         .then(response => response.json())
         .then(data => {
             if (data && data.field1) {
-                temperatura.textContent = data.field1;
-                umidade.textContent = data.field2;
-                pressao.textContent = data.field3;
-                luminosidade.textContent = data.field4;
+                temperatura.textContent = parseFloat(data.field1).toFixed(1);
+                umidade.textContent = parseFloat(data.field2).toFixed(1);
+                pressao.textContent = parseFloat(data.field3).toFixed(1);
+                luminosidade.textContent = parseFloat(data.field4).toFixed(1);
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
@@ -32,8 +32,10 @@ export function updateData2() {
         .then(response => response.json())
         .then(data => {
             if (data && data.field1) {
-                temperatura.textContent = data.field1;
-                umidade.textContent = data.field2;
+                temperatura.textContent = parseFloat(data.field1).toFixed(1);
+                umidade.textContent = parseFloat(data.field2).toFixed(1);
+                pressao.textContent = ''
+                luminosidade.textContent = ''
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
@@ -50,8 +52,10 @@ export function updateData3() {
         .then(response => response.json())
         .then(data => {
             if (data && data.field1) {
-                temperatura.textContent = data.field1;
-                umidade.textContent = data.field2;
+                temperatura.textContent = parseFloat(data.field1).toFixed(1);
+                umidade.textContent = parseFloat(data.field2).toFixed(1);
+                pressao.textContent = ''
+                luminosidade.textContent = ''
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
