@@ -30,7 +30,9 @@
 
     /* scrollbar */
     --bg-scrollbar: #8c8484;
-    --clr-scrollbar:#222020;
+    --clr-scrollbar: #222020;
+
+    --bg-eixos-graficos: #000;
 }
 
 .dark-mode {
@@ -42,7 +44,7 @@
 
     --color-theme-btn: #ffffff;
     --select-hover: #433e3e;
-    
+
     /* CARDS VARIABLES */
     --bg-temperatura: rgb(223, 12, 12);
     --bg-umidade: rgb(0, 81, 255);
@@ -61,7 +63,11 @@
     --transition: all 0.2s linear;
     --shadow-card: 5px 5px 30px 0 rgba(221, 221, 221, 5%);
 
-        /* scrollbar */
-        --bg-scrollbar: #000000;
-        --clr-scrollbar:#ffffff;
+    /* scrollbar */
+    --bg-scrollbar: #000000;
+    --clr-scrollbar: #ffffff;
+
+
+    --bg-eixos-graficos: #ffffff;
+
 }
