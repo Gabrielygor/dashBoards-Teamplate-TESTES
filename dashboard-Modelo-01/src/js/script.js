@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     pressaoGrafico();
 
     setInterval(cleanGrafico, 180000);  //Tempo é lido em milesegundos
-    setInterval(updateData, 180000);  //Tempo é lido em milesegundos
+    setInterval(updateData, 180000);  
     setInterval(temperaturaGrafico, 180000);
     setInterval(umidadeGrafico, 180000);
     setInterval(luminosidadeGrafico, 180000);

@@ -13,6 +13,8 @@
     .status {
         min-height: 12rem;
         max-width: 100%;
+        justify-content: start;
+
     }
 
     .info__label {
