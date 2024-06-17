@@ -30,9 +30,27 @@ export async function temperaturaGrafico() {
                             const hours = date.getHours();
                             const minutes = date.getMinutes();
                             return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+                        },
+
+                        style: {
+                            colors: 'var(--bg-eixos-graficos)', // Define a cor da fonte dos rótulos
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
                         }
                     }
                 },
+
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: 'var(--clr-scrollbar)', // Define a cor da fonte do eixo y
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
+                        }
+                    }
+                }
             };
 
             var chart = new ApexCharts(document.querySelector("#temperaturaGrafico"), options);
@@ -70,9 +88,25 @@ export async function umidadeGrafico() {
                             const hours = date.getHours();
                             const minutes = date.getMinutes();
                             return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+                        },
+                        style: {
+                            colors: 'var(--bg-eixos-graficos)', // Define a cor da fonte dos rótulos
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
                         }
                     }
                 },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: 'var(--clr-scrollbar)', // Define a cor da fonte do eixo y
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
+                        }
+                    }
+                }
             };
 
             var chart = new ApexCharts(document.querySelector("#umidadeGrafico"), options);
@@ -109,9 +143,25 @@ export async function pressaoGrafico() {
                             const hours = date.getHours();
                             const minutes = date.getMinutes();
                             return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+                        },
+                        style: {
+                            colors: 'var(--bg-eixos-graficos)', // Define a cor da fonte dos rótulos
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
                         }
                     }
                 },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: 'var(--clr-scrollbar)', // Define a cor da fonte do eixo y
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
+                        }
+                    }
+                }
             };
 
             var chart = new ApexCharts(document.querySelector("#pressaoGrafico"), options);
@@ -148,9 +198,25 @@ export async function luminosidadeGrafico() {
                             const hours = date.getHours();
                             const minutes = date.getMinutes();
                             return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+                        },
+                        style: {
+                            colors: 'var(--bg-eixos-graficos)', // Define a cor da fonte dos rótulos
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
                         }
                     }
                 },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: 'var(--clr-scrollbar)', // Define a cor da fonte do eixo y
+                            fontSize: '12px',
+                            fontFamily: 'Arial, sans-serif',
+                            fontWeight: 400
+                        }
+                    }
+                }
             };
 
             var chart = new ApexCharts(document.querySelector("#luminosidadeGrafico"), options);
