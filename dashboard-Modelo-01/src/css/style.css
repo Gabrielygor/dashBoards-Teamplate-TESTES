@@ -156,10 +156,15 @@ a {
 }
 
 .status {
+    border: 2px solid transparent;
     min-height: 6rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.status:hover {
+    border: 2px solid var(--status-border-hover);
 }
 
 .status__icon {
@@ -250,3 +255,4 @@ a {
 .footer__button__icon{
     rotate: 180deg;
 }
+

@@ -43,6 +43,9 @@
     --footer-button-hover-icon: #ffffff;
     --footer-button-hover-bg: #000000;
     --footer-button-hover-border: #000;
+
+    --status-border-hover:#fff;
+
 }
 
 .dark-mode {
@@ -90,5 +93,8 @@
     --footer-button-hover-icon: #000;
     --footer-button-hover-bg: #fff;
     --footer-button-hover-border: #000;
+
+    --status-border-hover:#fff;
+
 
 }
