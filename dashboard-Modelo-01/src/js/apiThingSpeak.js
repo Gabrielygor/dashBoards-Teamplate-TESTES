@@ -1,9 +1,14 @@
 import { optionId } from './script.js'
+import { indeceDeConfortoTermico } from './calc.js'
+
 
 const temperatura = document.getElementById('temperatura-valor')
 const umidade = document.getElementById('umidade-valor')
 const pressao = document.getElementById('pressao-valor')
 const luminosidade = document.getElementById('luminosidade-valor')
+
+let temperaturaAtual = ''
+let umidadeAtual = ''
 
 
 export function updateData() {
@@ -16,6 +21,12 @@ export function updateData() {
                 umidade.textContent = parseFloat(data.field2).toFixed(1);
                 pressao.textContent = parseFloat(data.field3).toFixed(1);
                 luminosidade.textContent = parseFloat(data.field4).toFixed(1);
+
+                temperaturaAtual = data.field1
+                umidadeAtual = data.field2
+
+                indeceDeConfortoTermico(temperaturaAtual,umidadeAtual);
+                
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
@@ -23,8 +34,9 @@ export function updateData() {
         .catch(error => {
             console.error('Erro ao recuperar dados', error);
         });
-    console.log(url);
+        console.log(url);
 }
+
 
 export function updateData2() {
     const url = `https://api.thingspeak.com/channels/${optionId}/feeds/last.json`;
@@ -36,6 +48,11 @@ export function updateData2() {
                 umidade.textContent = parseFloat(data.field2).toFixed(1);
                 pressao.textContent = ''
                 luminosidade.textContent = ''
+
+                temperaturaAtual = data.field1
+                umidadeAtual = data.field2
+
+                indeceDeConfortoTermico(temperaturaAtual,umidadeAtual);
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
@@ -56,6 +73,11 @@ export function updateData3() {
                 umidade.textContent = parseFloat(data.field2).toFixed(1);
                 pressao.textContent = parseFloat(data.field3).toFixed(1);
                 luminosidade.textContent = parseFloat(data.field4).toFixed(1);
+
+                temperaturaAtual = data.field1
+                umidadeAtual = data.field2
+
+                indeceDeConfortoTermico(temperaturaAtual,umidadeAtual);
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
@@ -65,4 +87,3 @@ export function updateData3() {
         });
     console.log(url);
 }
-
