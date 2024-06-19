@@ -256,3 +256,32 @@ a {
     rotate: 180deg;
 }
 
+.demais__info__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.demais__info {
+    box-shadow: var(--shadow-card);
+    background-color: var(--clr-background);
+    color: var(--clr-font);
+    font: var(--ts-normal-semibold);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+.demais__info:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.demais__info__icon {
+    font-size: 2rem;
+}
