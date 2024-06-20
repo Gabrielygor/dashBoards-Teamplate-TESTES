@@ -46,6 +46,9 @@
 
     --status-border-hover:#fff;
 
+    --bg-demais-infos:#000000;
+    --clr-demais-infos:#ffffff;
+
 }
 
 .dark-mode {
@@ -96,5 +99,6 @@
 
     --status-border-hover:#fff;
 
-
+    --bg-demais-infos:#fff;
+    --clr-demais-infos:#000;
 }

@@ -1,6 +1,6 @@
-
 html {
-    font-size: 62.5%; /* Esquema para 1rem ser igual a 10px */
+    font-size: 62.5%;
+    /* Esquema para 1rem ser igual a 10px */
     font-family: var(--ff);
     color: var(--clr-font);
     transition: var(--transition);
@@ -21,7 +21,7 @@ section {
     border-radius: 1.6rem;
 }
 
-footer{
+footer {
     background-color: var(--clr-card);
     transition: var(--transition);
     font: var(--ts-normal-semibold);
@@ -107,7 +107,8 @@ a {
     top: calc(100% + 1.5rem);
     visibility: hidden;
     opacity: 0;
-    overflow-x: hidden; /* Retira a rolagem lateral */
+    overflow-x: hidden;
+    /* Retira a rolagem lateral */
 }
 
 .state-select-list--show {
@@ -253,7 +254,7 @@ a {
     border: 2px solid var(--footer-button-hover-border);
 }
 
-.footer__button__icon{
+.footer__button__icon {
     rotate: 180deg;
 }
 
@@ -279,11 +280,10 @@ a {
 }
 
 .demais__info:hover {
-    background-color: black;
-    color: #fff;
+    background-color: var(--bg-demais-infos);
+    color: var(--clr-demais-infos);
 }
 
 .demais__info__icon {
     font-size: 2rem;
 }
-
