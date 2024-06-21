@@ -173,7 +173,7 @@ a {
 
 .status:hover {
     border: 2px solid var(--status-border-hover);
-    scale: .98;
+    scale: .97;
 }
 
 .status__icon {
