@@ -71,6 +71,13 @@ a {
     margin: 3rem 1.6rem;
 }
 
+.container__title {
+    font: var(--ts-normal-semibold);
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0 0 -1.8rem .8rem;
+}
+
 /* STATE */
 
 .state-select {
