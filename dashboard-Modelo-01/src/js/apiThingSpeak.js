@@ -1,5 +1,5 @@
 import { optionId } from './script.js'
-import { indeceDeConfortoTermico } from './calc.js'
+import { calcIndeceDeConfortoTermico, calcPontoDeOrvalho } from './calc.js'
 
 
 const temperatura = document.getElementById('temperatura-valor')
@@ -25,8 +25,9 @@ export function updateData() {
                 temperaturaAtual = data.field1
                 umidadeAtual = data.field2
 
-                indeceDeConfortoTermico(temperaturaAtual,umidadeAtual);
-                
+                calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
+                calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
+
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
@@ -34,7 +35,7 @@ export function updateData() {
         .catch(error => {
             console.error('Erro ao recuperar dados', error);
         });
-        console.log(url);
+    console.log(url);
 }
 
 
@@ -52,7 +53,9 @@ export function updateData2() {
                 temperaturaAtual = data.field1
                 umidadeAtual = data.field2
 
-                indeceDeConfortoTermico(temperaturaAtual,umidadeAtual);
+                calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
+                calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
+
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }
@@ -77,7 +80,9 @@ export function updateData3() {
                 temperaturaAtual = data.field1
                 umidadeAtual = data.field2
 
-                indeceDeConfortoTermico(temperaturaAtual,umidadeAtual);
+                calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
+                calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
+
             } else {
                 console.error('Não foi possível obter a temperatura.');
             }

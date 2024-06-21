@@ -1,19 +1,22 @@
 
 const confortoTermico = document.getElementById('indeceDeConfortoTermico');
+const pontoDeOrvalho = document.getElementById('pontoDeOrvalho')
 
-export function indeceDeConfortoTermico (temperaturaAtual, umidadeAtual) {
+export function calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual) {
     const heatIndex = temperaturaAtual - (0.55 - 0.0055 * umidadeAtual) * (temperaturaAtual - 14.5);
     confortoTermico.textContent = parseFloat(heatIndex).toFixed(1);
     return heatIndex;
 }
 
+export function calcPontoDeOrvalho(temperaturaAtual, umidadeAtual) {
+    const temperatura = parseFloat(temperaturaAtual);
+    const umidade = parseFloat(umidadeAtual);
 
+    if (isNaN(temperatura) || isNaN(umidade)) {
+        throw new Error('Temperatura e umidade devem ser números válidos');
+    }
 
-
-
-/* 
-
-    O Índice de Conforto Térmico (ICT) é uma medida utilizada para avaliar a sensação de conforto ou desconforto térmico de uma pessoa em um determinado ambiente.
-
-
-*/
+    const pontodeOrvalho = temperatura - ((100 - umidade) / 5);
+    pontoDeOrvalho.textContent = parseFloat(pontodeOrvalho).toFixed(1);
+    return pontodeOrvalho;
+}
