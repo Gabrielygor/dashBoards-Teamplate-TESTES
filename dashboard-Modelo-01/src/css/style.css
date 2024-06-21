@@ -270,6 +270,7 @@ a {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
 }
 
 .demais__info {
@@ -282,7 +283,7 @@ a {
     align-items: center;
     gap: .5rem;
     padding: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     border-radius: 1rem;
     transition: var(--transition);
 }
@@ -294,4 +295,5 @@ a {
 
 .demais__info__icon {
     font-size: 2rem;
+    margin-right: 1rem;
 }
