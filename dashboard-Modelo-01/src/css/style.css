@@ -73,6 +73,7 @@ a {
 
 .container__title {
     font: var(--ts-normal-semibold);
+    color: var(--clr-font);
     font-size: 2rem;
     text-transform: uppercase;
     margin: 0 0 -1.8rem .8rem;
