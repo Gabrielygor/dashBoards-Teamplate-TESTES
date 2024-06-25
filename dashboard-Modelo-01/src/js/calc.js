@@ -23,6 +23,8 @@ export function calcPontoDeOrvalho(temperaturaAtual, umidadeAtual) {
 }
 
 export function calcAltitudeAproximada (pressaoAtual) {
+    //OBS : PRESSAO LIDA EM hPa
+
     const pressaoNivelDoMar = 1013.25
     const escala = 8.3
 
