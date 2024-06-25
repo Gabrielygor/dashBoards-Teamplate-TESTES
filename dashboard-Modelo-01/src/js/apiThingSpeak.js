@@ -1,5 +1,5 @@
 import { optionId } from './script.js'
-import { calcIndeceDeConfortoTermico, calcPontoDeOrvalho } from './calc.js'
+import { calcIndeceDeConfortoTermico, calcPontoDeOrvalho, calcAltitudeAproximada } from './calc.js'
 
 
 const temperatura = document.getElementById('temperatura-valor')
@@ -9,6 +9,7 @@ const luminosidade = document.getElementById('luminosidade-valor')
 
 let temperaturaAtual = ''
 let umidadeAtual = ''
+let pressaoAtual = ''
 
 
 export function updateData() {
@@ -24,9 +25,12 @@ export function updateData() {
 
                 temperaturaAtual = data.field1
                 umidadeAtual = data.field2
+                pressaoAtual = data.field3
+
 
                 calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
                 calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
+                calcAltitudeAproximada(pressaoAtual);
 
             } else {
                 console.error('Não foi possível obter a temperatura.');
@@ -52,9 +56,12 @@ export function updateData2() {
 
                 temperaturaAtual = data.field1
                 umidadeAtual = data.field2
+                pressaoAtual = data.field3
+
 
                 calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
                 calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
+                calcAltitudeAproximada(pressaoAtual);
 
             } else {
                 console.error('Não foi possível obter a temperatura.');
@@ -79,9 +86,12 @@ export function updateData3() {
 
                 temperaturaAtual = data.field1
                 umidadeAtual = data.field2
+                pressaoAtual = data.field3
+
 
                 calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
                 calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
+                calcAltitudeAproximada(pressaoAtual);
 
             } else {
                 console.error('Não foi possível obter a temperatura.');
