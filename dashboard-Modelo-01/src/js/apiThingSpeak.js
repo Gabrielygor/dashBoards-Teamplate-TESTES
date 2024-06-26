@@ -1,5 +1,5 @@
 import { optionId } from './script.js'
-import { calcIndeceDeConfortoTermico, calcPontoDeOrvalho, calcAltitudeAproximada } from './calc.js'
+import { calcIndeceDeConfortoTermico, calcPontoDeOrvalho, calcAltitudeAproximada, calcIndiceDeCalor } from './calc.js'
 
 
 const temperatura = document.getElementById('temperatura-valor')
@@ -29,6 +29,7 @@ export function updateData() {
 
 
                 calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
+                calcIndiceDeCalor(temperaturaAtual, umidadeAtual);
                 calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
                 calcAltitudeAproximada(pressaoAtual);
 
@@ -60,6 +61,7 @@ export function updateData2() {
 
 
                 calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
+                calcIndiceDeCalor(temperaturaAtual, umidadeAtual);
                 calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
                 calcAltitudeAproximada(pressaoAtual);
 
@@ -90,6 +92,7 @@ export function updateData3() {
 
 
                 calcIndeceDeConfortoTermico(temperaturaAtual, umidadeAtual);
+                calcIndiceDeCalor(temperaturaAtual, umidadeAtual);
                 calcPontoDeOrvalho(temperaturaAtual, umidadeAtual);
                 calcAltitudeAproximada(pressaoAtual);
 
